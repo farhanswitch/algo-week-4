@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define PRICE_PER_HOUR 10000
+int PRICE_PER_HOUR = 10000;
 
 bool isValidNumber(char input[]);
 int getDiscount(int duration);
