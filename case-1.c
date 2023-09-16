@@ -157,7 +157,7 @@ void menuBookingPlace()
     {
     }
 }
-// Fungsi untuk menampilkan daftar harga
+// Fungsi untuk menampilkan daftar harga dan diskon
 void menuPriceList()
 {
     printf("a. Harga per jam adalah Rp 10.000\n");
