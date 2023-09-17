@@ -64,7 +64,7 @@ int main()
         while (1)
         {
             char inputMenu[100];
-            printf("Pilih menu (1-4): ");
+            printf("Pilih menu (1-3): ");
             scanf("%s", inputMenu);
             getchar();
             // Error Checking. Validasi apakah menu yang diinput merupakan angka yang valid
@@ -122,7 +122,7 @@ bool checkIsValidNumber(char input[])
  */
 void menuInputData()
 {
-    int count;
+    int count = 0;
     struct StudentData listStudent[1000];
 
     bool isActive = true;
