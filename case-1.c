@@ -506,6 +506,10 @@ int playGame(int duration)
             }
         }
     }
+    printf("Waktu bermain telah habis.\nTekan enter untuk kembali ke menu utama..");
+    while (getchar() != '\n')
+    {
+    }
 
     return 0;
 }
