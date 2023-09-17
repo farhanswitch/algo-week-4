@@ -32,7 +32,17 @@ bool checkIsValidNumber(char input[]);
 bool checkIsValidScore(int score);
 bool checkIsLettersAndSpacesOnly(char str[255]);
 char getGrade(float score);
-
+void clearscr()
+{
+#ifdef _WIN32
+    system("cls");
+#elif defined(unix) || defined(__unix__) || defined(__unix) || \
+    (defined(__APPLE__) && defined(__MACH__))
+    system("clear");
+#else
+#error "OS not supported."
+#endif
+}
 int main()
 {
 
@@ -41,7 +51,7 @@ int main()
 
     while (isActive)
     {
-        system("clear");
+        clearscr();
         printf("===================================\n");
         printf("PROGRAM INPUT NILAI MAHASISWA\n");
         printf("===================================\n\n\n");
@@ -119,7 +129,7 @@ void menuInputData()
     while (isActive)
     {
         // Bersihkan layar
-        system("clear");
+        clearscr();
         struct StudentData student;
         printf("Mahasiswa No. %d\n", (count) + 1);
         while (1)

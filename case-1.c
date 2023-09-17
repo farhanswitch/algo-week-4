@@ -6,6 +6,18 @@
 
 int PRICE_PER_HOUR = 10000;
 
+void clearscr()
+{
+#ifdef _WIN32
+    system("cls");
+#elif defined(unix) || defined(__unix__) || defined(__unix) || \
+    (defined(__APPLE__) && defined(__MACH__))
+    system("clear");
+#else
+#error "OS not supported."
+#endif
+}
+
 bool isValidNumber(char input[]);
 int getDiscount(int duration);
 void menuBookingPlace();
@@ -22,8 +34,7 @@ int main()
     while (isActive)
     {
         // Bersihkan layar dari kalimat yang sudah diprint
-        system("clear");
-        system("cls"); /*Tidak jalan di MacOS*/
+        clearscr();
         printf("===================================\n");
         printf("PROGRAM BILLING GAME ONLINE\n");
         printf("===================================\n\n\n");
