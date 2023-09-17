@@ -252,7 +252,7 @@ void menuInputData()
 
         printf("Nilai rata-rata: %.2f\n", student.nilaiRataRata);
         printf("Grade: %c\n", student.finalGrade);
-        printf("Status kelulusan: %s\n", student.isPass ? "Lulus" : "Gagal");
+        printf("Status kelulusan: %s\n", student.isPass ? "Lulus" : "Tidak Lulus");
         printf("\n------------------------------\n\n");
         listStudent[count] = student;
         count += 1;
@@ -370,23 +370,7 @@ char getGrade(float score)
 void checkIsExceedTheMinimumGrade(struct StudentData *student)
 {
     bool isPass = true;
-    if ((*student).gradeTugas == 'D' || (*student).gradeTugas == 'E')
-    {
-        isPass = false;
-    }
-    else if ((*student).gradeQuis == 'D' || (*student).gradeQuis == 'E')
-    {
-        isPass = false;
-    }
-    if ((*student).gradeAbsensi == 'D' || (*student).gradeAbsensi == 'E')
-    {
-        isPass = false;
-    }
-    if ((*student).gradePraktek == 'D' || (*student).gradePraktek == 'E')
-    {
-        isPass = false;
-    }
-    if ((*student).gradeUAS == 'D' || (*student).gradeUAS == 'E')
+    if ((*student).finalGrade == 'D' || (*student).finalGrade == 'E')
     {
         isPass = false;
     }
