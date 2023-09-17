@@ -319,7 +319,7 @@ bool checkIsLettersAndSpacesOnly(char nama[255])
         "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ \0";
     // Dapatkan panjang dari kalimat yg akan dicek
     int inputLength = strlen(nama);
-    int totalValid;
+    int totalValid = 0;
 
     // cek per karakter dari kalimat apakah valid atau tidak
     for (int x = 0; x < inputLength; x++)
