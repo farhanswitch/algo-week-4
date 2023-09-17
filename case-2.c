@@ -274,7 +274,7 @@ void menuInputData()
             {
                 if (count < 10)
                 {
-                    printf("Saat ini anda sudah menginput %d mahasiswa.\nMinimal jumlah mahasiswa adalah 10.\n", (count) + 1);
+                    printf("Saat ini anda sudah menginput %d mahasiswa.\nMinimal jumlah mahasiswa adalah 10.\n", count);
                 }
                 else
                 {
